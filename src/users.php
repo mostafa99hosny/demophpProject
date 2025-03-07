@@ -19,12 +19,13 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <title>Users</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../public/css/style.css" rel="stylesheet">
 </head>
 <body>
+    <?php include 'templates/navbar_admin.php'; ?>
     <div class="container mt-5">
         <h2>Users</h2>
-        <a href="admin_orders.php" class="btn btn-secondary">Back to Orders</a>
-        <a href="add_user.php" class="btn btn-success">Add User</a>
+        <a href="add_user.php" class="btn btn-success mb-3">Add User</a>
         <table class="table">
             <thead>
                 <tr>
@@ -46,5 +47,7 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </tbody>
         </table>
     </div>
+    <?php include 'templates/footer.php'; ?>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

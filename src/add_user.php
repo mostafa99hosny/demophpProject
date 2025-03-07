@@ -28,11 +28,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <title>Add User</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../public/css/style.css" rel="stylesheet">
 </head>
 <body>
+    <?php include 'templates/navbar_admin.php'; ?>
     <div class="container mt-5">
         <h2>Add User</h2>
-        <a href="users.php" class="btn btn-secondary">Back</a>
         <form method="POST" class="mt-3">
             <div class="mb-3">
                 <label>Name</label>
@@ -56,5 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <button type="submit" class="btn btn-primary">Add User</button>
         </form>
     </div>
+    <?php include 'templates/footer.php'; ?>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

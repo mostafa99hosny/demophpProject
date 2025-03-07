@@ -18,15 +18,14 @@ $orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin - Orders</title>
+    <title>All Orders</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../public/css/style.css" rel="stylesheet">
 </head>
 <body>
+    <?php include 'templates/navbar_admin.php'; ?>
     <div class="container mt-5">
         <h2>All Orders</h2>
-        <a href="logout.php" class="btn btn-danger float-end">Logout</a>
-        <a href="products.php" class="btn btn-primary">Products</a>
-        <a href="users.php" class="btn btn-primary">Users</a>
         <table class="table">
             <thead>
                 <tr>
@@ -48,5 +47,7 @@ $orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </tbody>
         </table>
     </div>
+    <?php include 'templates/footer.php'; ?>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

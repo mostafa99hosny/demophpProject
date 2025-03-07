@@ -20,12 +20,13 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <title>Products</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../public/css/style.css" rel="stylesheet">
 </head>
 <body>
+    <?php include 'templates/navbar_admin.php'; ?>
     <div class="container mt-5">
         <h2>Products</h2>
-        <a href="admin_orders.php" class="btn btn-secondary">Back to Orders</a>
-        <a href="add_product.php" class="btn btn-success">Add Product</a>
+        <a href="add_product.php" class="btn btn-success mb-3">Add Product</a>
         <table class="table">
             <thead>
                 <tr>
@@ -49,5 +50,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </tbody>
         </table>
     </div>
+    <?php include 'templates/footer.php'; ?>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
